@@ -35,11 +35,13 @@ function draw(world) {
 
     const st = { x, y };
     const end = {
-      x: world.origin.x + world.horizontalRadius * Math.cos(getRadian(i + 20)),
-      y: world.origin.y + world.verticalRadius * Math.sin(getRadian(i + 20))
+      x: world.origin.x + world.horizontalRadius * Math.cos(getRadian(i + 1)),
+      y: world.origin.y + world.verticalRadius * Math.sin(getRadian(i + 1))
     }
-
+    // Point
     r.DrawCircle(x, y, 1, r.BLUE);
+
+    //Line
     r.DrawLineEx(st, end, 2, r.BLUE);
   }
 }
