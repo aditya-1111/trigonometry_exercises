@@ -2,7 +2,7 @@ const r = require("raylib");
 
 function setup() {
   const TITLE = "Angle";
-  const FPS = 60;
+  const FPS = 0;
 
   const WIDTH = 1000;
   const HEIGHT = 800;
@@ -44,12 +44,15 @@ function draw(world) {
 
   const angle = Math.acos(horizontalDiff / hypotenuse);
   const degree = getDegree(angle);
-  console.log(horizontalDiff, verticalDiff);
 
   r.DrawCircleSectorLines(world.pointA, 100, 90, 90 + degree, 40, r.BLACK);
+
   r.DrawLineEx(world.pointA, { x: world.pointB.x, y: world.pointA.y }, 2, r.RED);
   r.DrawLineEx(world.pointB, { x: world.pointB.x, y: world.pointA.y }, 2, r.RED);
-  r.DrawText(`${degree.toFixed(2)}°`, world.pointA.x, world.pointA.y, 20, r.RED);
+
+  r.DrawText(`${degree.toFixed(2)}°`, world.pointA.x, world.pointA.y + 10, 20, r.RED);
+  r.DrawText(`A`, world.pointA.x - 25, world.pointA.y + 5, 20, r.RED);
+  r.DrawText(`B`, world.pointB.x + 5, world.pointB.y - 25, 20, r.RED);
 }
 
 function loop(world) {

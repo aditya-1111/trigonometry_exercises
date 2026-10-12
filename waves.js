@@ -69,7 +69,7 @@ function drawCosWave(world) {
   }
 }
 
-function drawGraph(world) {
+function drawLabel(world) {
   r.DrawText("0", world.origin.x - 15, world.origin.y - 15, 15, r.BLACK)
   r.DrawText("1", world.origin.x - 20, world.origin.y - world.amplitude, 15, r.BLACK)
   r.DrawText("-1", world.origin.x - 20, world.origin.y + world.amplitude, 15, r.BLACK)
@@ -82,7 +82,7 @@ function draw(world) {
   drawSinWave(world);
   drawCosWave(world);
 
-  drawGraph(world);
+  drawLabel(world);
 }
 
 function loop(world) {
