@@ -49,7 +49,6 @@ function drawSinWave(world) {
 
     r.DrawCircle(x, y, 1, r.RED);
     r.DrawLineEx(st, end, 2, r.RED);
-    // drawLabel(x, y);
   }
 }
 
