@@ -12,8 +12,8 @@ function setup() {
   const frequency = 12;
   const amplitude = 50;
   const color = {
-    r: 0,
-    g: 0,
+    r: 100,
+    g: 23,
     b: 255,
     a: 255
   }

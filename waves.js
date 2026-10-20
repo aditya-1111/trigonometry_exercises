@@ -49,6 +49,7 @@ function drawSinWave(world) {
 
     r.DrawCircle(x, y, 1, r.RED);
     r.DrawLineEx(st, end, 2, r.RED);
+    // drawLabel(x, y);
   }
 }
 
@@ -70,9 +71,9 @@ function drawCosWave(world) {
 }
 
 function drawLabel(world) {
-  r.DrawText("0", world.origin.x - 15, world.origin.y - 15, 15, r.BLACK)
-  r.DrawText("1", world.origin.x - 20, world.origin.y - world.amplitude, 15, r.BLACK)
-  r.DrawText("-1", world.origin.x - 20, world.origin.y + world.amplitude, 15, r.BLACK)
+  r.DrawText("0", world.origin.x - 15, world.origin.y - 15, 15, r.BLACK);
+  r.DrawText("1", world.origin.x - 20, world.origin.y - world.amplitude, 15, r.BLACK);
+  r.DrawText("-1", world.origin.x - 20, world.origin.y + world.amplitude, 15, r.BLACK);
 
 }
 
